@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 
 # Copy package.json and package-lock.json and install dependencies
 COPY package*.json ./
-RUN npm ci --only=production   # or `npm install` during development
+RUN npm install express
 
 # Copy application source
 COPY . .
